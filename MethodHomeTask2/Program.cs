@@ -7,7 +7,8 @@
             //Console.WriteLine(Sum(25,120,45));
             //SeasonOfMonth(5);
             //SeasonOfMonth(11);
-            Console.WriteLine(ProductOfDigits(231));
+            //Console.WriteLine(ProductOfDigits(231));
+            Console.WriteLine(TotalPay(40,50,20));
 
         }
         static int Sum(params int[] arr)
@@ -77,6 +78,28 @@
                 int a = n % 10;
                 result *= a;
                 n /= 10;
+            }
+            return result;
+        }    
+
+        static int TotalPay(params int[] arr)
+        {
+            int result = 0;
+            int min = arr[0];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] < min)
+                {
+                    min = arr[i];
+                }
+            }
+            foreach (int item in arr)
+            {
+                if (item==min)
+                {
+                    continue;
+                }
+                result += item;
             }
             return result;
         }
