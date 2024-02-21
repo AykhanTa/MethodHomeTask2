@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Sum(25,120,45));
+            //Console.WriteLine(Sum(25,120,45));
+            SeasonOfMonth(5);
+            SeasonOfMonth(11);
         }
         static int Sum(params int[] arr)
         {
@@ -17,6 +19,52 @@
                 }
             }
             return result;
+        }
+
+        static void SeasonOfMonth(int n)
+        {
+            switch (n)
+            {
+                case 1:
+                    Console.WriteLine("qisdir");
+                    break;
+                case 2:
+                    Console.WriteLine("qisdir");
+                    break;
+                case 3:
+                    Console.WriteLine("yazdir");
+                    break;
+                case 4:
+                    Console.WriteLine("yazdir");
+                    break;
+                case 5:
+                    Console.WriteLine("yazdir");
+                    break;
+                case 6:
+                    Console.WriteLine("yaydir");
+                    break;
+                case 7:
+                    Console.WriteLine("yaydir");
+                    break;
+                case 8:
+                    Console.WriteLine("yaydir");
+                    break;
+                case 9:
+                    Console.WriteLine("payizdir");
+                    break;
+                case 10:
+                    Console.WriteLine("payizdir");
+                    break;
+                case 11:
+                    Console.WriteLine("payizdir");
+                    break;
+                case 12:
+                    Console.WriteLine("qisdir");
+                    break;
+                default:
+                    Console.WriteLine("Duzgun eded daxil edilmeyib");
+                    break;
+            }
         }
     }
 }
