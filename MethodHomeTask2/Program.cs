@@ -5,8 +5,10 @@
         static void Main(string[] args)
         {
             //Console.WriteLine(Sum(25,120,45));
-            SeasonOfMonth(5);
-            SeasonOfMonth(11);
+            //SeasonOfMonth(5);
+            //SeasonOfMonth(11);
+            Console.WriteLine(ProductOfDigits(231));
+
         }
         static int Sum(params int[] arr)
         {
@@ -65,6 +67,18 @@
                     Console.WriteLine("Duzgun eded daxil edilmeyib");
                     break;
             }
+        }
+
+        static int ProductOfDigits(int n)
+        {
+            int result = 1;
+            while (n > 0)
+            {
+                int a = n % 10;
+                result *= a;
+                n /= 10;
+            }
+            return result;
         }
     }
 }
